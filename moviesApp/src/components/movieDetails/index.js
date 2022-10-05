@@ -19,8 +19,10 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ( props) => {
+const MovieDetails = (props) => {
   const movie = props.movie
+
+  console.log(movie)
 
   return (
     <>
@@ -61,9 +63,7 @@ const MovieDetails = ( props) => {
         component="ul" 
         sx={root}
       >
-        <li>
-          <Chip label="Production Countries" sx={chip} color="primary" />
-        </li>
+        <li> <Chip label="Production Countries" sx={chip} color="primary" /> </li>
         {movie.production_countries.map((c) => (
           <li key={c.name}>
             <Chip label={c.name} sx={chip} />
