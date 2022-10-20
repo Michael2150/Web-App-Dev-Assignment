@@ -30,14 +30,12 @@ const MovieHeader = (props) => {
       <IconButton aria-label="go back">
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
-      <>
         {
           fav ? <Avatar sx={{ backgroundColor: 'red' }}>
           <FavoriteIcon />
         </Avatar> : null 
         }
-        </>
-      <Typography variant="h4" component="h3">
+        <Typography variant="h4" component="h3">
         {movie.title}
         <a href={movie.homepage}>
           <HomeIcon color="primary" />
