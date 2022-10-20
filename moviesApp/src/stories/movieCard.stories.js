@@ -8,8 +8,6 @@ export default {
 };
 
 export const Basic = () => {
-  const movie = SampleMovie;
-  movie.title = "Something Random";
   return (
     <MovieCard
       movie={SampleMovie}

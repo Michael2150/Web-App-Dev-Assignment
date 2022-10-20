@@ -22,22 +22,22 @@ function MovieListPageTemplate({ movies, title, selectFavourite }) {
     else setGenreFilter(value);
   };
 
-return (
+  return (
     <Grid container sx={{ padding: '20px' }}>
-        <Grid item xs={12}>
-            <Header title={title} />
-        </Grid>
-        <Grid item container spacing={5}>
+      <Grid item xs={12}>
+        <Header title={title} />
+      </Grid>
+      <Grid item container spacing={5}>
         <Grid key="find" item xs={12} sm={6} md={4} lg={3} xl={2}>
-            <FilterCard
+          <FilterCard
             onUserInput={handleChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}
-            />
+          />
         </Grid>
-            <MovieList selectFavourite={selectFavourite} movies={displayedMovies}></MovieList>
-        </Grid>
+        <MovieList selectFavourite={selectFavourite} movies={displayedMovies}></MovieList>
+      </Grid>
     </Grid>
-    );
+  );
 }
 export default MovieListPageTemplate;
